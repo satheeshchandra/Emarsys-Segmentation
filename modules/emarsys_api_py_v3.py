@@ -266,7 +266,7 @@ def createSegment(segmentName, contactListID, accountName):
 	conn.close()
 	return data
 
-# '{"replyCode":0,"replyText":"OK","data":{"id":"778264"}}'
+
 
 def main(): pass
 
