@@ -108,9 +108,7 @@ def deleteContactList(contactListID,accountName):
 	conn.request("POST", api_path, payload, headers)
 	res = conn.getresponse()
 	data = res.read()
-	# jdata = json.loads(data)
 	conn.close()
-	# return json.loads(data)["replyText"]
 	return data
 
 
@@ -182,7 +180,6 @@ def createContactsList(listName, fileName, accountName):
 def createContactsListFromDataFrame(listName, dataFrame, accountName):
 	# Creates contacts from the file
 	api_path = '/api/v2/contactlist'
-	# contacts=getContactsFromFile(fileName)
 	contacts = list(dataFrame['3'])
 	payload = "{\"key_id\":\"3\",\"name\":\"" + listName + "\","
 	payload = payload + "\"external_ids\":" + json.dumps([contact for contact in contacts]) + "}"
@@ -198,7 +195,6 @@ def overwriteContactListFromDataFrame(listName, dataFrame, accountName):
 	# Overwrite the contactList 
 	contactListID = getContactListId(listName, accountName)
 	api_path = '/api/v2/contactlist/'+str(contactListID)+'/replace'
-	# contacts=getContactsFromFile(fileName)
 	contacts = list(dataFrame['3'])
 	payload = "{\"key_id\":\"3\",\"name\":\"" + listName + "\","
 	payload = payload + "\"external_ids\":" + json.dumps([contact for contact in contacts]) + "}"
