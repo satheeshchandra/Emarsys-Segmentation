@@ -1,6 +1,11 @@
 '''
 This is a utility/helper program used along with Emarsys Email Marketing platform API.  
 It is used to create audience lists and segments programmatically.
+
+For more info on Emarsys Marketing Auire APIs, please refer the following URL
+List of all public API endpoints
+https://help.emarsys.com/hc/en-us/articles/115005253125-List-of-all-public-API-endpoints
+
 '''
 
 import csv, http.client, json
