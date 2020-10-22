@@ -48,9 +48,7 @@ def deleteSegment(segmentId,accountName):
 	conn.request("GET", api_path, payload, headers)
 	res = conn.getresponse()
 	data = res.read()
-	# jdata = json.loads(data)
 	conn.close()
-	# return json.loads(data)["replyText"]
 	return data
 
 
