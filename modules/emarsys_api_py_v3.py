@@ -230,7 +230,7 @@ def addContactsListFromDataFrame(listName, dataFrame, accountName):   #Contacts 
 	return data
 
 def createSegment_v0(segmentName, contactListID, accountName):
-	# Creates contacts from the file
+	# Creates contacts from the file  OLD VERSION
 	api_path = '/api/v2/filter'
 	payload = "{\"name\":\"" + segmentName + "\", \"baseContactListId\":\"" + str(contactListID) + "\"}"
 	headers = getAuthHeader(accountName)
@@ -272,5 +272,4 @@ def createSegment(segmentName, contactListID, accountName):
 def main(): pass
 
 if __name__ == "__main__": main()
-
 
