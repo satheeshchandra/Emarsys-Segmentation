@@ -1,13 +1,13 @@
 '''
 This program creates customer segment programatically in Emarsys Email Marketing platform.
 Dependencies: Adyen transaction files.
-Valid Emarsys API access
+Valid Emarsys API access required for this program.
 ''''
 
 import bootconfig as config
 import logging
 from adyentransactions import *
-from emarsys_api_py_v3 import * 
+from emarsys_api_py_v3 import *  
 from argparse import ArgumentParser
 
 df_packages = pd.DataFrame()
